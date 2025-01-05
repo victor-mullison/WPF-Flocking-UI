@@ -1,0 +1,33 @@
+﻿<Grid x:Class="WPFBoids.Views.ControlPanel"
+      x:Name="MyControlPanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFBoids.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background ="#464f69"
+>
+
+    <Label Content="Alignment" Foreground="White" FontSize="24" FontFamily="Arial Black" BorderBrush="Black" Margin="22,20,22,222"/>
+    <Slider x:Name="AlignmentSlider" Margin="12,60,10,183" ValueChanged="Alignment_Changed"
+            Minimum="0.1"
+            Maximum="1"
+            Value="0.4"
+            />
+
+    <Label Content="Cohesion" Foreground="White" FontSize="24" FontFamily="Arial Black" BorderBrush="Black" Margin="32,101,30,142"/>
+    <Slider x:Name="CohesionSlider" Margin="12,142,10,102"
+            Minimum="0.1"
+            Maximum="1"
+            Value="0.2"/>
+            
+
+    <Label Content="Separation" Foreground="White" FontSize="24" FontFamily="Arial Black" BorderBrush="Black" Margin="22,182,22,61"/>
+    <Slider x:Name="SeparationSlider" Margin="12,223,10,20"
+            Minimum="0.1"
+            Maximum="3"
+            Value="0.3"/>
+    
+</Grid>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPFBoids.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFBoids"
+        xmlns:models="clr-namespace:WPFBoids.Models" xmlns:views="clr-namespace:WPFBoids.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.6,1" StartPoint="0.4,0">
+                    <GradientStop Color="#FF131B33"/>
+                    <GradientStop Color="#FF464F69" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Rectangle Margin="118,73,480,73" Fill="#FF131B33" />
+            <views:ControlPanel Margin="121,76,483,76" Background="#FF464F69" />
+            
+            <Border Margin="348,57,123,48" BorderBrush="Black" Background="#FF131B33" Panel.ZIndex="2">
+                <models:FlockCanvas  Background="#FF464F69" />
+            </Border>
+            
+        </Grid>
+    </Viewbox>
+
+</Window>
